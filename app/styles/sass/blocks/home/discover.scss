@@ -1,0 +1,34 @@
+.discover {
+    background: #F6F6F6;
+    padding: 120px 0;
+
+    
+
+    &__description {
+        margin-bottom: var(--size-xl);
+        color: var(--text-gray);
+        font-size: 14px;
+    }
+
+    &__img {
+        mix-blend-mode: luminosity;
+        text-align: center;
+    }
+
+
+    @media screen and (max-width: 1199px) {
+        padding: 100px 0;
+    }
+    @media screen and (max-width: 991px) {
+        padding: 80px 0;
+    }
+    @media screen and (max-width: 767px) {
+        padding: 60px 0 80px;
+        &__row {
+            flex-direction: column-reverse;
+        }
+    }
+    @media screen and (max-width: 575px) {
+        padding: 40px 0 80px;
+    }
+}

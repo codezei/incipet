@@ -1,0 +1,100 @@
+.footer {
+    background-color: var(--bg-dark);
+    color: #fff;
+    border-radius: 2rem 2rem 0 0;
+    position: relative;
+    margin-top: -2rem;
+    padding: 100px 0 1.5rem;
+    &__top {
+        margin-bottom: 120px;
+    }
+    &__bottom {
+        background-color: #202020;
+        border-radius: 1.5rem;
+        padding: 2rem;
+        
+    }
+    &__logo {
+        margin-bottom: 4rem;
+    }
+    &__navigation {
+        &-title {
+            margin-bottom: 2rem;
+        }
+    }
+    &__link {
+        color: var(--primary-saturated);
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+        &:not(:last-child) {
+            margin-bottom: 1.5rem;
+        }
+    }
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .menu {
+        a {
+            color: var(--text-gray);
+            &:hover {
+                color: #fff;
+            }
+        }
+        li {
+            &:not(:last-child) {
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1119px) {
+        &__top {
+            margin-bottom: 100px;
+        }
+    }
+
+    @media screen and (max-width: 991px) {
+        padding-top: 80px;
+        &__top {
+            margin-bottom: 80px;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        padding-top: 60px;
+        &__top {
+            margin-bottom: 60px;
+        }
+        &__link {
+            &:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+        }
+        &__logo {
+            margin-bottom: 2rem;
+        }
+        &__navigation {
+            &-title {
+                margin-bottom: 1.5rem;
+            }
+        }
+        .menu {
+            li {
+                &:not(:last-child) {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 575px) {
+        padding-top: 40px;
+        &__top {
+            margin-bottom: 40px;
+        }
+    }
+
+}

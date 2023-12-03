@@ -1,0 +1,34 @@
+.affirmation {
+    background: #F2F1EC;
+    padding: 120px 0;
+    &__title {
+        margin-bottom: var(--size-lg);
+        max-width: 900px;
+    }
+    &__img {
+        mix-blend-mode: luminosity;
+        margin-top: -8rem;
+        pointer-events: none;
+    }
+
+    @media screen and (max-width: 1199px) {
+        padding: 100px 0;
+    }
+
+    @media screen and (max-width: 991px) {
+        padding: 80px 0;
+        &__img {
+            margin-top: -4rem;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        padding: 60px 0;
+        &__img {
+            margin-top: -2rem;
+        }
+    }
+    @media screen and (max-width: 575px) {
+        padding: 40px 0;
+    }
+
+}

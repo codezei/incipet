@@ -1,0 +1,167 @@
+.intro {
+    text-align: center;
+    position: relative;
+    margin-bottom: 120px;
+    &--home {
+        padding-bottom: 294px;
+        background-image: url(../images/dist/intro-home.jpg);
+        background-position: bottom center;
+        background-repeat: no-repeat;
+    }
+    &__title {
+        text-align: center;
+        &--pets {
+            position: relative;
+            &:before, &:after {
+                content: "";
+                display: block;
+                width: 170px;
+                height: 170px;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                pointer-events: none;
+                z-index: -1;
+            }
+            &:before {
+                background-image: url(../images/dist/pet-1.png);
+                left: 0;
+            }
+            &:after {
+                background-image: url(../images/dist/pet-2.png);
+                right: 0;
+            }
+        }
+    }
+    &__subtitle {
+        color: var(--text-gray);
+        margin-bottom: var(--size-md);
+    }
+    &__row {
+        margin-bottom: var(--size-lg);
+    }
+    &__img {
+        position: relative;
+        margin-top: 2rem;
+        &:before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            width: 140px;
+            height: 140px;
+            background-image: url(../images/dist/tracks.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            left: 0;
+            bottom: 100%;
+
+            pointer-events: none;
+        }
+        &:after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            width: 260px;
+            height: 260px;
+            background-image: url(../images/dist/ball.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            top: calc(100% + 50px);
+            right: 0;
+    
+            pointer-events: none;
+        }
+    }
+
+
+    @media screen and (max-width: 1399px) {
+        &--home {
+            background-position: bottom left;
+        }
+    }
+    @media screen and (max-width: 1199px) {
+        margin-bottom: 100px;
+    }
+    @media screen and (max-width: 991px) {
+        margin-bottom: 80px;
+        &__title {
+            &--pets {
+                &:before, &:after {
+                    opacity: 0.5;
+                }
+                &:before {
+                    left: auto;
+                    right: calc(100% - 30px);
+                }
+                &:after {
+                    right: auto;
+                    left: calc(100% - 30px);
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 767px) {
+        margin-bottom: 60px;
+        &--home {
+            background-size: 900px;
+            padding-bottom: 200px;
+        }
+        &__img {
+            &:after {
+                top: 100%;
+            }
+            &:before {
+                right: 100%;
+                left: auto;
+            }
+        }
+    }
+    @media screen and (max-width: 575px) {
+        
+        margin-bottom: 40px;
+        &--home {
+            background-size: 700px;
+            padding-bottom: 150px;
+        }
+        &__img {
+            margin-top: 1rem;
+            &:after {
+                display: none;
+                background: none;
+            }
+            &:before {
+        display: none;
+        background: none;
+            }
+        }
+        &__title {
+            &--pets {
+                &:before, &:after {
+                    display: none;
+                    background-image: none;
+                }
+
+            }
+        }
+    }
+    
+}
+
+
+
+@keyframes moveBgLeft {
+    from {
+        background-position-x: 100vw;
+    } to {
+        background-position-x: 50%;
+    }
+}
